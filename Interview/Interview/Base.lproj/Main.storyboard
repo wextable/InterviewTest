@@ -23,7 +23,7 @@
         <!--Car Search-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -68,6 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="375" y="301"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="QYx-Rz-1GS">
@@ -148,8 +149,8 @@
                                     <outlet property="delegate" destination="pYT-3I-dnI" id="41D-UT-7VC"/>
                                 </connections>
                             </tableView>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="YQa-si-UKX">
-                                <rect key="frame" x="-2" y="20" width="604" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="YQa-si-UKX">
+                                <rect key="frame" x="-2" y="64" width="604" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Mfy-NQ-JmV"/>
                                 </constraints>
@@ -157,6 +158,12 @@
                                     <action selector="sliderValueChanged:" destination="pYT-3I-dnI" eventType="valueChanged" id="S6O-tk-wcx"/>
                                 </connections>
                             </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZg-KR-R94">
+                                <rect key="frame" x="255" y="102" width="77" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -164,6 +171,8 @@
                             <constraint firstItem="NSj-mJ-Ppv" firstAttribute="leading" secondItem="Fb1-PG-q2o" secondAttribute="leading" id="II2-th-HXX"/>
                             <constraint firstItem="YQa-si-UKX" firstAttribute="leading" secondItem="Fb1-PG-q2o" secondAttribute="leading" id="OKl-d2-Dal"/>
                             <constraint firstAttribute="trailing" secondItem="YQa-si-UKX" secondAttribute="trailing" id="f1K-uv-IHV"/>
+                            <constraint firstItem="VZg-KR-R94" firstAttribute="centerX" secondItem="YQa-si-UKX" secondAttribute="centerX" constant="-7" id="iVc-nx-EeV"/>
+                            <constraint firstItem="VZg-KR-R94" firstAttribute="top" secondItem="YQa-si-UKX" secondAttribute="bottom" constant="8" id="u7Y-cW-2x9"/>
                         </constraints>
                     </view>
                     <connections>
@@ -173,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="clu-Db-nIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023" y="214"/>
+            <point key="canvasLocation" x="1211" y="292"/>
         </scene>
     </scenes>
 </document>

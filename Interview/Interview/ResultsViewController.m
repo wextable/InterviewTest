@@ -38,6 +38,9 @@
 
 }
 
+
+#pragma mark - UISlider
+
 - (IBAction)sliderValueChanged:(id)sender {
     self.maxPrice = self.slider.value;
     
@@ -45,6 +48,8 @@
     [self.tableView reloadData];
 }
 
+
+#pragma mark - UITableView delegate and dataSource
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -74,23 +79,18 @@
     return cell;
 }
 
+
+#pragma mark - Filtering Results
+
 - (void)filterResults {
-    /*for (Car *car in self.resultsArray) {
-        if (car.price > self.maxPrice) {
-            [self.resultsArray removeObject:car];
-        }
-    }*/
-    
-    for ( int i = 0 ; i < [self.resultsArray count] ; i++) {
-        Car *car = [[Car alloc] init];
-        car = [self.resultsArray objectAtIndex:i];
+    for (Car *car in self.resultsArray) {
         if (car.price > self.maxPrice) {
             [self.resultsArray removeObject:car];
         }
     }
     
-    
 }
+
 
 #pragma mark - KVO
 
