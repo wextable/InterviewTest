@@ -71,7 +71,7 @@
     
     cell.lblMake.text = car.make;
     cell.lblModel.text = car.model;
-    cell.lblPrice.text = [NSString stringWithFormat:@"%d", car.price];
+    cell.lblPrice.text = [NSString stringWithFormat:@"%ld", (long)car.price];
     if (car.specialDealText) {
         cell.lblSpecialDeal.text = car.specialDealText;
     }
